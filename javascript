@@ -34,3 +34,6 @@ function calculateScore() {
     // Implement the logic to calculate the user's score based on answers
     return Math.floor(Math.random() * 100); // Example scoring logic
 }
+$(document).ready(function(){
+    $('.image-slider').slick();
+});
