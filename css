@@ -1,13 +1,12 @@
-/* Reset and basic styles */
-body, html {
-    margin: 0;
-    padding: 0;
+/* Basic styles */
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header styling */
 header {
     background-color: #007bff;
     color: #fff;
@@ -19,15 +18,27 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Main section styling */
 section {
     padding: 50px 0;
 }
 
-/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Animations using animate.css */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
 }
