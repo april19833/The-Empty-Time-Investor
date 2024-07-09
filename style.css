@@ -1,103 +1,62 @@
-/* Основные стили */
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 .container {
-    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
 }
 
 header p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
-.section {
+section {
     padding: 50px 0;
     text-align: center;
 }
 
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.grid-item {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-/* Дополнительные стили для анимаций и элементов библиотек */
-.animated {
-    animation-duration: 1s;
+/* Specific section styles */
+#time-investment {
+    background-color: #fff;
 }
 
-.image-slider {
-    width: 80%;
-    margin: 0 auto;
+#crypto-insights {
+    background-color: #f8f9fa;
 }
 
-.image-slider img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-}
-
-#crypto-chart {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Дополнительные стили для slick slider */
-.slick-slider {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.slick-prev,
-.slick-next {
-    font-size: 2rem;
-}
-
-.slick-prev {
-    left: -40px;
-}
-
-.slick-next {
-    right: -40px;
+/* Media queries and responsive styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 }
