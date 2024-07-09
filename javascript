@@ -37,3 +37,6 @@ function calculateScore() {
 $(document).ready(function(){
     $('.image-slider').slick();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize comparison table functionality
+});
