@@ -4,33 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Empty Time Investor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The Empty Time Investor</h1>
-            <p>Turning Time into Wealth</p>
+
+<header>
+    <div class="container">
+        <h1>The Empty Time Investor</h1>
+        <p>Turning Time into Wealth</p>
+    </div>
+</header>
+
+<section id="time-investment" class="section">
+    <div class="container">
+        <h2>Time Investment Strategies</h2>
+        <div class="grid-container">
+            <!-- Articles, interviews, case studies -->
+            <article class="grid-item">
+                <h3>Article Title 1</h3>
+                <p>Article content...</p>
+            </article>
+            <article class="grid-item">
+                <h3>Article Title 2</h3>
+                <p>Article content...</p>
+            </article>
+            <article class="grid-item">
+                <h3>Article Title 3</h3>
+                <p>Article content...</p>
+            </article>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="time-investment" data-aos="fade-up">
-        <!-- Статьи, интервью, кейс-стадии -->
-    </section>
+<section id="crypto-insights" class="section">
+    <div class="container">
+        <h2>Crypto Insights</h2>
+        <div class="grid-container">
+            <!-- Trends, guides, reviews -->
+            <article class="grid-item">
+                <h3>Crypto Trend Analysis</h3>
+                <p>Insightful analysis of current crypto trends...</p>
+            </article>
+            <article class="grid-item">
+                <h3>Guide to Cryptocurrency</h3>
+                <p>Comprehensive guide on getting started with cryptocurrency...</p>
+            </article>
+            <article class="grid-item">
+                <h3>Review: Latest Crypto Products</h3>
+                <p>Reviews of the latest products in the crypto market...</p>
+            </article>
+        </div>
+    </div>
+</section>
 
-    <section id="crypto-insights" data-aos="fade-up">
-        <!-- Тренды, руководства, обзоры -->
-    </section>
+<!-- Other sections: Minimalist Lifestyle, Stylish Living on a Budget, Tech and Gadgets -->
 
-    <footer>
-        <!-- Ссылки на социальные сети, подписка на новости -->
-    </footer>
+<footer>
+    <div class="container">
+        <p>Social media links, newsletter subscription</p>
+    </div>
+</footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true // Animation plays only once
+    });
+
+    var ctx = document.getElementById('crypto-chart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Bitcoin Price',
+                data: [7000, 8000, 9000, 10000, 11000, 12000],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    $(document).ready(function(){
+        $('.image-slider').slick();
+    });
+
+</script>
+
 </body>
 </html>
