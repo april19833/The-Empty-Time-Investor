@@ -1,44 +1,103 @@
-/* Basic styles */
+/* Основные стили */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
 }
 
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header {
-    background-color: #007bff;
+    background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-section {
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.section {
     padding: 50px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 20px 0;
+    text-align: center;
 }
 
-/* Animations using animate.css */
+/* Дополнительные стили для анимаций и элементов библиотек */
 .animated {
     animation-duration: 1s;
-    animation-fill-mode: both;
 }
 
-.fadeIn {
-    animation-name: fadeIn;
+.image-slider {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.fadeInUp {
-    animation-name: fadeInUp;
+.image-slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#crypto-chart {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Дополнительные стили для slick slider */
+.slick-slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 2rem;
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next {
+    right: -40px;
 }
