@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Empty Time Investor</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- For animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
     <header>
@@ -15,52 +16,21 @@
         </div>
     </header>
 
-    <section id="time-investment" class="animated fadeIn">
-        <!-- Articles, interviews, case studies -->
+    <section id="time-investment" data-aos="fade-up">
+        <!-- Статьи, интервью, кейс-стадии -->
     </section>
 
-    <section id="crypto-insights" class="animated fadeInUp">
-        <!-- Trends, guides, reviews -->
+    <section id="crypto-insights" data-aos="fade-up">
+        <!-- Тренды, руководства, обзоры -->
     </section>
-
-    <!-- Other sections: Minimalist Lifestyle, Stylish Living on a Budget, Tech and Gadgets -->
 
     <footer>
-        <!-- Social media links, newsletter subscription -->
+        <!-- Ссылки на социальные сети, подписка на новости -->
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<div id="minimalism-quiz">
-    <h3>Quiz: Assess Your Minimalism Level</h3>
-    <!-- Questions and answer options -->
-    <button onclick="checkQuiz()">Check Results</button>
-</div>
-<div class="image-slider">
-    <div><img src="image1.jpg" alt="Image 1"></div>
-    <div><img src="image2.jpg" alt="Image 2"></div>
-    <div><img src="image3.jpg" alt="Image 3"></div>
-</div>
-<table id="comparison-table">
-    <thead>
-        <tr>
-            <th>Feature</th>
-            <th>Product A</th>
-            <th>Product B</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Price</td>
-            <td>$100</td>
-            <td>$150</td>
-        </tr>
-        <tr>
-            <td>Battery Life</td>
-            <td>10 hours</td>
-            <td>12 hours</td>
-        </tr>
-    </tbody>
-</table>
