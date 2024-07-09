@@ -25,3 +25,12 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+function checkQuiz() {
+    // Logic to evaluate user responses and give recommendations based on results
+    alert("Your minimalism score is: " + calculateScore());
+}
+
+function calculateScore() {
+    // Implement the logic to calculate the user's score based on answers
+    return Math.floor(Math.random() * 100); // Example scoring logic
+}
