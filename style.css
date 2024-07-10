@@ -7,9 +7,9 @@
 }
 
 .logo_logomark__bE4dv {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    margin-right: 10px;
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    margin-right: 5px;
     fill: #333; /* Adjust color as needed */
 }
 
@@ -90,4 +90,36 @@ main {
     background-clip: content-box;
     border-radius: var(--border-radius);
     opacity: 0.5;
+}
+.element.style {
+  /* These are inline styles applied directly to an element */
+}
+
+/* Styles for the class .developer_tools-back-text */
+.developer_tools-back-text {
+  width: 90%;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+/* Box-sizing reset for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* User agent stylesheet (default styles applied by the browser) */
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+/* Styles for the class .developer-tools_card-parent */
+.developer-tools_card-parent {
+  perspective: 1000px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 2.5rem 2rem 1.25rem;
+  display: flex;
 }
