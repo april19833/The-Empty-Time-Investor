@@ -13,6 +13,7 @@ body {
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-theme {
@@ -28,15 +29,18 @@ body {
 }
 
 header {
-  background-color: var(--color-primary);
+  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
   color: white;
   padding: 20px 0;
+  text-align: center;
+  background-image: url('header-background.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 2.5rem;
 }
 
 nav ul {
@@ -61,17 +65,18 @@ nav a:hover {
 
 button {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 10px 20px;
   background-color: var(--color-accent);
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
   background-color: var(--color-primary);
+  transform: scale(1.1);
 }
 
 main {
@@ -79,18 +84,29 @@ main {
   background-color: var(--color-background);
 }
 
-section {
+.card {
   padding: 20px;
   background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-top: 0;
 }
 
 footer {
   background-color: var(--color-secondary);
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 
 .footer-links a, .social-icons a {
@@ -111,7 +127,6 @@ footer {
 
 footer p {
   margin: 0;
-  text-align: center;
 }
 
 .footer-links, .social-icons {
