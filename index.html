@@ -7,96 +7,17 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Общие стили */
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      color: #333;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header {
-      background-color: #0056b3;
-      color: white;
-      padding: 10px 0;
-      transition: background-color 0.3s ease;
-    }
-
-    header:hover {
-      background-color: #004080;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-    }
-
-    nav ul li {
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #ffc107;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    .card {
-      background-color: white;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
+    /* Стили аккордеона */
     .accordion-item__click-target {
       cursor: pointer;
       padding: 15px 0;
       border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .accordion-item__click-target:hover {
-      background-color: #f0f0f0;
     }
 
     .accordion-item__title {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .accordion-icon {
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .open .accordion-icon {
-      transform: rotate(45deg);
     }
 
     .accordion-item__dropdown {
@@ -107,50 +28,13 @@
     .accordion-item__dropdown.open {
       display: block;
     }
-
-    footer {
-      background-color: #0056b3;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
-
-    footer:hover {
-      background-color: #004080;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-      color: #ffc107;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      color: white;
-      font-size: 1.5rem;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      transform: translateY(-3px);
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Investing in Empty Time</h1>
-      <!-- Навигационное меню -->
+      <!-- Navigation menu -->
       <nav>
         <ul>
           <li><a href="#time-investment">Time Investment Strategies</a></li>
@@ -219,7 +103,7 @@
   <footer>
     <div class="container">
       <p>&copy; 2024 Investing in Empty Time</p>
-      <!-- Ссылки в подвале и социальные иконки -->
+      <!-- Footer links and social icons -->
       <div class="footer-links">
         <a href="#privacy-policy">Privacy Policy</a>
         <a href="#terms-of-service">Terms of Service</a>
