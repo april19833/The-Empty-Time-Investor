@@ -5,6 +5,7 @@
   --color-secondary: #6c757d;
   --color-accent: #17a2b8;
   --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Playfair Display', serif;
 }
 
 body {
@@ -41,6 +42,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+  font-family: var(--font-heading);
 }
 
 nav ul {
@@ -100,6 +102,7 @@ main {
 
 .card h2 {
   margin-top: 0;
+  font-family: var(--font-heading);
 }
 
 footer {
