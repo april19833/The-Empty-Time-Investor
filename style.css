@@ -1,85 +1,64 @@
+:root {
+  --color-background: white;
+  --color-foreground: black;
+}
+
 body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+}
+
+.dark-theme {
+  --color-background: black;
+  --color-foreground: white;
 }
 
 header {
-  background-color: #f8f9fa;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-foreground);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-foreground);
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
 }
 
 main {
   padding: 20px;
 }
 
+section {
+  margin-bottom: 20px;
+}
+
 footer {
-  background-color: #f8f9fa;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-.Row {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 0;
-}
-
-.Row_content {
+  padding: 20px;
+  border-top: 1px solid var(--color-foreground);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-background);
 }
 
-.Row_body {
-  flex-grow: 1;
-}
-
-.Row_title {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 0;
-}
-
-.Row_subtitle {
-  color: #666;
-  margin: 5px 0 0;
-}
-
-.Row_trailing {
-  display: flex;
-  align-items: center;
-}
-
-.Button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.Button-small {
-  font-size: 0.9em;
-}
-
-.Button-secondary {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.Button-secondary:hover {
-  background-color: #e0e0e0;
-}
-
-.Button_icon {
-  margin-right: 5px;
-}
-
-.SettingsCard_themeItemButton__12FVX a {
+.footer-links a, .social-icons a {
   text-decoration: none;
+  color: var(--color-foreground);
+  margin-right: 10px;
 }
