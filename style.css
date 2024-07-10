@@ -1,5 +1,3 @@
-/* Existing styles */
-
 /* Shared styles */
 .card {
   background-color: #fff;
@@ -10,8 +8,25 @@
 }
 
 /* Adjustments for accordion items */
-.accordion-item__dropdown p {
-  padding: 15px;
+.accordion-item__click-target {
+  cursor: pointer;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item__dropdown {
+  display: none;
+  padding: 15px 0;
+}
+
+.accordion-item__dropdown.open {
+  display: block;
 }
 
 /* Additional styles for visuals */
@@ -86,8 +101,7 @@
   }
 }
 
-/* New styles to integrate */
-
+/* Theme-specific styles */
 :root {
   --color-background: #f0f0f0;
   --color-foreground: #333;
@@ -124,9 +138,6 @@ header {
   color: white;
   padding: 20px 0;
   text-align: center;
-  background-image: url('header-background.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 header h1 {
@@ -162,68 +173,83 @@ button {
   background-color: var(--color-accent);
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: var(--color-primary);
-  transform: scale(1.1);
+  background-color: #007bff;
 }
 
 main {
   padding: 20px 0;
-  background-color: var(--color-background);
 }
 
-.card {
+section {
   padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card h2 {
-  margin-top: 0;
-  font-family: var(--font-heading);
 }
 
 footer {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px 0;
 }
 
-.footer-links a, .social-icons a {
-  text-decoration: none;
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
   color: white;
-  margin-right: 15px;
+  text-decoration: none;
+  margin: 0 10px;
   transition: color 0.3s;
 }
 
-.footer-links a:hover, .social-icons a:hover {
+.footer-links a:hover {
   color: var(--color-accent);
 }
 
-.social-icons a::before {
-  content: '🔗';
-  margin-right: 5px;
-}
-
-footer p {
-  margin: 0;
-}
-
-.footer-links, .social-icons {
-  display: flex;
-  justify-content: center;
+.social-icons {
   margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--color-accent);
+}
+
+/* Accordion styles */
+.accordion-item__click-target {
+  cursor: pointer;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item__dropdown {
+  display: none;
+  padding: 15px 0;
+}
+
+.accordion-item__dropdown.open {
+  display: block;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
 }
