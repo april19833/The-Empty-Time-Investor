@@ -1,3 +1,93 @@
+/* Existing styles */
+
+/* Shared styles */
+.card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Adjustments for accordion items */
+.accordion-item__dropdown p {
+  padding: 15px;
+}
+
+/* Additional styles for visuals */
+.visuals {
+  margin-top: 30px;
+}
+
+.visuals img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.visuals .animated {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.visuals .animated img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.visuals .animated:hover img {
+  transform: scale(1.1);
+}
+
+.visuals .animated .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.visuals .animated:hover .overlay {
+  opacity: 1;
+}
+
+.visuals .animated .text {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .accordion-item__dropdown p {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .visuals .animated {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* New styles to integrate */
+
 :root {
   --color-background: #f0f0f0;
   --color-foreground: #333;
