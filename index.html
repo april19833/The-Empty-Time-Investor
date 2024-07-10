@@ -7,26 +7,111 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Стили аккордеона */
-    .accordion-item__click-target {
-      cursor: pointer;
-      padding: 15px 0;
-      border-bottom: 1px solid #ddd;
+    /* Общие стили */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      color: #333;
     }
 
-    .accordion-item__title {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #0056b3;
+      color: white;
+      padding: 10px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffc107;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion-item__click-target {
+      cursor: pointer;
+      padding: 15px 20px;
+      border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    .accordion-icon {
+      font-size: 1.2rem;
+    }
+
     .accordion-item__dropdown {
       display: none;
-      padding: 15px 0;
+      padding: 15px 20px;
     }
 
     .accordion-item__dropdown.open {
       display: block;
+    }
+
+    footer {
+      background-color: #0056b3;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffc107;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
     }
   </style>
 </head>
@@ -34,7 +119,7 @@
   <header>
     <div class="container">
       <h1>Investing in Empty Time</h1>
-      <!-- Navigation menu -->
+      <!-- Навигационное меню -->
       <nav>
         <ul>
           <li><a href="#time-investment">Time Investment Strategies</a></li>
@@ -51,7 +136,7 @@
   <main>
     <section id="time-investment" class="card accordion-item">
       <h2 class="accordion-item__click-target">
-        <span>Time Investment Strategies</span>
+        <span>⏳ Time Investment Strategies</span>
         <span class="accordion-icon">+</span>
       </h2>
       <div class="accordion-item__dropdown">
@@ -61,7 +146,7 @@
 
     <section id="crypto-insights" class="card accordion-item">
       <h2 class="accordion-item__click-target">
-        <span>Crypto Insights</span>
+        <span>💹 Crypto Insights</span>
         <span class="accordion-icon">+</span>
       </h2>
       <div class="accordion-item__dropdown">
@@ -71,7 +156,7 @@
 
     <section id="minimalist-lifestyle" class="card accordion-item">
       <h2 class="accordion-item__click-target">
-        <span>Minimalist Lifestyle</span>
+        <span>🌿 Minimalist Lifestyle</span>
         <span class="accordion-icon">+</span>
       </h2>
       <div class="accordion-item__dropdown">
@@ -81,7 +166,7 @@
 
     <section id="stylish-living" class="card accordion-item">
       <h2 class="accordion-item__click-target">
-        <span>Stylish Living on a Budget</span>
+        <span>🏠 Stylish Living on a Budget</span>
         <span class="accordion-icon">+</span>
       </h2>
       <div class="accordion-item__dropdown">
@@ -91,7 +176,7 @@
 
     <section id="tech-gadgets" class="card accordion-item">
       <h2 class="accordion-item__click-target">
-        <span>Tech and Gadgets</span>
+        <span>📱 Tech and Gadgets</span>
         <span class="accordion-icon">+</span>
       </h2>
       <div class="accordion-item__dropdown">
@@ -103,7 +188,7 @@
   <footer>
     <div class="container">
       <p>&copy; 2024 Investing in Empty Time</p>
-      <!-- Footer links and social icons -->
+      <!-- Ссылки в подвале и социальные иконки -->
       <div class="footer-links">
         <a href="#privacy-policy">Privacy Policy</a>
         <a href="#terms-of-service">Terms of Service</a>
