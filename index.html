@@ -6,6 +6,29 @@
   <title>Investing in Empty Time</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Стили аккордеона */
+    .accordion-item__click-target {
+      cursor: pointer;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-item__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-item__dropdown {
+      display: none;
+      padding: 15px 0;
+    }
+
+    .accordion-item__dropdown.open {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -95,13 +118,6 @@
 
   <script src="script.js"></script>
   <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-theme');
-    });
-
     // JavaScript для аккордеона
     const accordionItems = document.querySelectorAll('.accordion-item');
 
