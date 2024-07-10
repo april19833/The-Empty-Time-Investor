@@ -36,9 +36,9 @@
       ];
 
       foreach ($sections as $section) {
-        echo "<section id='{$section['id']}' class='card'>";
-        echo "<h2>{$section['title']}</h2>";
-        echo "<p>{$section['description']}</p>";
+        echo "<section id='" . htmlspecialchars($section['id']) . "' class='card'>";
+        echo "<h2>" . htmlspecialchars($section['title']) . "</h2>";
+        echo "<p>" . htmlspecialchars($section['description']) . "</p>";
         echo "</section>";
       }
     ?>
