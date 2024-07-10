@@ -1,25 +1,26 @@
-element.style {
+/* Reset and global styles */
+:root {
+    --font-family-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-size-xxl: 3rem;
+    --font-size-xl: 1.75rem;
+    --font-size-l: 1.125rem;
+    --font-size: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-xs: 0.75rem;
+    --font-letter-spacing: 0.1px;
+    --spacing-xxl: 3rem;
+    --spacing-xl: 2rem;
+    --spacing-l: 1.5rem;
+    --spacing: 1.25rem;
+    --spacing-sm: 1rem;
+    --spacing-xs: .5rem;
+    --spacing-xxs: .25rem;
+    --text-color-neutral: #9898ae;
+    --border-radius: 1rem;
+    --transition-default: cubic-bezier(0.4,0,0.6,1) .16s;
 }
-body>footer, body>header, body>main {
-    position: relative;
-    padding: var(--spacing-l) var(--spacing-xxl);
-}
-main {
-    flex-grow: 1;
-    display: flex;
-}
-* {
-    scrollbar-color: var(--text-color-neutral) #150c24;
-}
-*, :after, :before {
-    box-sizing: border-box;
-    margin: 0;
-}
-user agent stylesheet
-main {
-    display: block;
-    unicode-bidi: isolate;
-}
+
+/* Body and main layout */
 body {
     display: flex;
     flex-direction: column;
@@ -29,7 +30,7 @@ body {
     background: #150c24;
     color: var(--text-color-primary);
     font-family: var(--font-family-sans);
-    letter-spacing: .1px;
+    letter-spacing: var(--font-letter-spacing);
     line-height: 1.35;
     font-weight: 400;
     font-feature-settings: normal, common-ligatures contextual, "kern";
@@ -39,83 +40,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 }
-:root {
-    --font-family-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-family-mono: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
-    --font-size-xxl: 3rem;
-    --font-size-xl: 1.75rem;
-    --font-size-l: 1.125rem;
-    --font-size: 1rem;
-    --font-size-sm: 0.875rem;
-    --font-size-xs: 0.75rem;
-    --font-letter-spacing: 0.1px;
-    --font-letter-spacing-small: 0.3px;
-    --font-line-height-xl: 2.5;
-    --font-line-height: 1.35;
-    --font-line-height-small: 1;
-    --spacing-xxl: 3rem;
-    --spacing-xl: 2rem;
-    --spacing-l: 1.5rem;
-    --spacing: 1.25rem;
-    --spacing-sm: 1rem;
-    --spacing-xs: .5rem;
-    --spacing-xxs: .25rem;
-    --media-screen-l: 1280px;
-    --media-screen: 1024px;
-    --media-screen-sm: 768px;
-    --border-radius: 1rem;
-    --border-radius-sm: .5rem;
-    --border-radius-xxs: .25rem;
-    --transition-default: cubic-bezier(0.4,0,0.6,1) .16s;
-    --transition-slow: cubic-bezier(0.4,0,0.6,1) .32s;
-    --text-color-brand: #6f56e0;
-    --text-color-brand-hover: #b6a9ef;
-    --text-color-primary: #f2f3f7;
-    --text-color-primary-hover: #fff;
-    --text-color-secundary: #9886e9;
-    --text-color-secundary-hover: #e1dcf9;
-    --text-color-neutral: #9898ae;
-    --text-color-neutral-hover: #dddde4;
-    --text-color-positive: #52e071;
-    --text-color-positive-hover: #74e78d;
-    --text-color-negative: #fd4438;
-    --text-color-negative-hover: #fe7b72;
-    --text-color-warning: #deb13f;
-    --text-color-warning-hover: #e4bf62;
-    --text-color-shadow: #16161e;
-    --text-color-shadow-hover: #2b2b3b;
-    --background-color-container: rgba(104,106,131,.12);
-    --background-color-container-hover: rgba(104,106,131,.24);
-    --background-color-primary: #6f56e0;
-    --background-color-primary-hover: #8a75e6;
-    --background-color-secundary: rgba(119,101,229,.16);
-    --background-color-secundary-hover: rgba(119,101,229,.32);
-Show all properties (13 more)
+
+main {
+    flex-grow: 1;
+    display: flex;
+    padding: var(--spacing-l) var(--spacing-xxl);
 }
-html {
-    font-size: 16px;
-}
-injected stylesheet
-html {
-    --color-primary: #c5ff4a;
-}
-*, :after, :before {
+
+/* Scrollbar styling */
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
 }
-*, :after, :before {
-    box-sizing: border-box;
-    margin: 0;
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
-::-webkit-scrollbar, ::-webkit-scrollbar-track {
+
+*::-webkit-scrollbar-track {
     background-color: transparent;
 }
-::-webkit-scrollbar-thumb {
+
+*::-webkit-scrollbar-thumb {
     background-color: var(--text-color-neutral);
     border: 4px solid transparent;
     background-clip: content-box;
     border-radius: var(--border-radius);
-    opacity: .5;
+    opacity: 0.5;
 }
-::-webkit-scrollbar, ::-webkit-scrollbar-track {
-    background-color: transparent;
