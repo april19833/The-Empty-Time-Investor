@@ -299,3 +299,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 });
 </script>
+<script>
+  "dark" === localStorage.theme ||
+  (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+  ("auto" === localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ? (document.documentElement.dataset.theme = "dark")
+    : (document.documentElement.dataset.theme = "light");
+</script>
