@@ -6,6 +6,29 @@
   <title>Investing in Empty Time</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Стили аккордеона */
+    .accordion-item__click-target {
+      cursor: pointer;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-item__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-item__dropdown {
+      display: none;
+      padding: 15px 0;
+    }
+
+    .accordion-item__dropdown.open {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -26,29 +49,54 @@
   </header>
 
   <main>
-    <section id="time-investment" class="card">
-      <h2>Time Investment Strategies</h2>
-      <p>Explore effective strategies for investing your time wisely.</p>
+    <section id="time-investment" class="card accordion-item">
+      <h2 class="accordion-item__click-target">
+        <span>Time Investment Strategies</span>
+        <span class="accordion-icon">+</span>
+      </h2>
+      <div class="accordion-item__dropdown">
+        <p>Explore effective strategies for investing your time wisely.</p>
+      </div>
     </section>
 
-    <section id="crypto-insights" class="card">
-      <h2>Crypto Insights</h2>
-      <p>Discover insights and updates from the cryptocurrency world.</p>
+    <section id="crypto-insights" class="card accordion-item">
+      <h2 class="accordion-item__click-target">
+        <span>Crypto Insights</span>
+        <span class="accordion-icon">+</span>
+      </h2>
+      <div class="accordion-item__dropdown">
+        <p>Discover insights and updates from the cryptocurrency world.</p>
+      </div>
     </section>
 
-    <section id="minimalist-lifestyle" class="card">
-      <h2>Minimalist Lifestyle</h2>
-      <p>Learn about living a minimalist lifestyle for greater simplicity.</p>
+    <section id="minimalist-lifestyle" class="card accordion-item">
+      <h2 class="accordion-item__click-target">
+        <span>Minimalist Lifestyle</span>
+        <span class="accordion-icon">+</span>
+      </h2>
+      <div class="accordion-item__dropdown">
+        <p>Learn about living a minimalist lifestyle for greater simplicity.</p>
+      </div>
     </section>
 
-    <section id="stylish-living" class="card">
-      <h2>Stylish Living on a Budget</h2>
-      <p>Tips and ideas for maintaining a stylish home on a limited budget.</p>
+    <section id="stylish-living" class="card accordion-item">
+      <h2 class="accordion-item__click-target">
+        <span>Stylish Living on a Budget</span>
+        <span class="accordion-icon">+</span>
+      </h2>
+      <div class="accordion-item__dropdown">
+        <p>Tips and ideas for maintaining a stylish home on a limited budget.</p>
+      </div>
     </section>
 
-    <section id="tech-gadgets" class="card">
-      <h2>Tech and Gadgets</h2>
-      <p>Explore the latest in technology and gadgets for modern living.</p>
+    <section id="tech-gadgets" class="card accordion-item">
+      <h2 class="accordion-item__click-target">
+        <span>Tech and Gadgets</span>
+        <span class="accordion-icon">+</span>
+      </h2>
+      <div class="accordion-item__dropdown">
+        <p>Explore the latest in technology and gadgets for modern living.</p>
+      </div>
     </section>
   </main>
 
@@ -69,5 +117,20 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // JavaScript для аккордеона
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+      const clickTarget = item.querySelector('.accordion-item__click-target');
+      const dropdown = item.querySelector('.accordion-item__dropdown');
+
+      clickTarget.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('open');
+        dropdown.style.display = isOpen ? 'block' : 'none';
+        clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
+      });
+    });
+  </script>
 </body>
 </html>
