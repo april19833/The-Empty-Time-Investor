@@ -1,3 +1,23 @@
+/* Styles for Logo */
+.logo_logo__ak9OE {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo_logomark__bE4dv {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    margin-right: 10px;
+    fill: #333; /* Adjust color as needed */
+}
+
+.logo_text {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
 /* Reset and global styles */
 :root {
     --font-family-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
