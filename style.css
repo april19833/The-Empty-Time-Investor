@@ -15,6 +15,7 @@ header {
     background-color: #333;
     padding: 10px;
     text-align: center;
+    color: white;
 }
 
 .logo-container {
@@ -36,23 +37,11 @@ a {
     text-decoration: none;
 }
 
-a:hover .logo-text-mini {
-    transform: rotate(0deg);
+.text-path-svg {
+    margin-top: 20px;
 }
 
-
-/* Specific section styles */
-#time-investment {
-    background-color: #fff;
-}
-
-#crypto-insights {
-    background-color: #f8f9fa;
-}
-
-/* Media queries and responsive styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+text {
+    font-size: 24px;
+    fill: white;
 }
