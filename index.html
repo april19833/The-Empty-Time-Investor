@@ -55,6 +55,8 @@
           <svg class="logo_logomark__bE4dv" width="100%" height="100%" viewBox="0 0 264 225" xmlns="http://www.w3.org/2000/svg" aria-labelledby="oikeiosis">
             <!-- Your SVG logo content -->
             <title id="oikeiosis">HB logo</title>
+            <!-- Insert your SVG code here for the logo -->
+            <image xlink:href="images/17205496490996w1y34k7.jpg" width="264" height="225" />
           </svg>
           <span>Investing in Empty Time</span>
         </p>
@@ -164,7 +166,13 @@
   <!-- Slick Slider Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script>
-    $('.slider').slick();
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
   </script>
 </body>
 </html>
