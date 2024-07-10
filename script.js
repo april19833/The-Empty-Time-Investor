@@ -13,6 +13,5 @@ accordionItems.forEach(item => {
   clickTarget.addEventListener('click', () => {
     const isOpen = item.classList.toggle('open');
     dropdown.style.display = isOpen ? 'block' : 'none';
-    clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
   });
 });
