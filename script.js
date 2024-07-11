@@ -11,3 +11,12 @@ accordionItems.forEach(item => {
     clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
   });
 });
+
+// JavaScript for theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+let isDarkTheme = false;
+
+themeToggle.addEventListener('click', () => {
+  isDarkTheme = !isDarkTheme;
+  document.body.classList.toggle('dark-theme', isDarkTheme);
+});
