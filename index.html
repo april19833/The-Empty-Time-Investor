@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Accordion styles */
+    /* Стили аккордеона */
     .accordion-item__click-target {
       cursor: pointer;
       padding: 15px 0;
@@ -28,20 +28,6 @@
     .accordion-item__dropdown.open {
       display: block;
     }
-
-    /* Moon GIF styling */
-    #theme-toggle {
-      background: url('moon.gif') no-repeat center center;
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      border: none;
-      cursor: pointer;
-      display: block;
-      margin: 20px auto;
-      text-indent: -9999px; /* Hides text content */
-      overflow: hidden;
-    }
   </style>
 </head>
 <body>
@@ -58,8 +44,7 @@
           <li><a href="#tech-gadgets">Tech and Gadgets</a></li>
         </ul>
       </nav>
-      <!-- Moon GIF theme toggle -->
-      <button id="theme-toggle" aria-label="Toggle Theme"></button>
+      <button id="theme-toggle">Toggle Theme</button>
     </div>
   </header>
 
@@ -133,7 +118,7 @@
 
   <script src="script.js"></script>
   <script>
-    // JavaScript for the accordion
+    // JavaScript для аккордеона
     const accordionItems = document.querySelectorAll('.accordion-item');
 
     accordionItems.forEach(item => {
@@ -145,13 +130,6 @@
         dropdown.style.display = isOpen ? 'block' : 'none';
         clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
       });
-    });
-
-    // JavaScript for moon GIF theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-theme'); // Toggle dark theme class on body
     });
   </script>
 </body>
