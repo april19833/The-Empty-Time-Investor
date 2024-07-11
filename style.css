@@ -106,69 +106,70 @@ main {
 
 .card h2 {
   margin-top: 0;
+  font-size: 1.8rem;
   font-family: var(--font-heading);
 }
 
-footer {
-  background-color: var(--color-secondary);
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+.card p {
+  margin: 10px 0 0 0;
 }
 
-.footer-links a,
-.social-icons a {
+.footer {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer a {
   text-decoration: none;
   color: white;
-  margin-right: 15px;
+  margin: 0 10px;
   transition: color 0.3s;
 }
 
-.footer-links a:hover,
+.footer a:hover {
+  color: var(--color-accent);
+}
+
+.footer .footer-links {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
 .social-icons a:hover {
   color: var(--color-accent);
 }
 
-.social-icons a::before {
-  content: '🔗';
-  margin-right: 5px;
-}
-
-footer p {
-  margin: 0;
-}
-
-.footer-links,
-.social-icons {
+/* Accordion styles */
+.accordion-item__click-target {
+  cursor: pointer;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Dark theme styles */
-body.dark-theme {
-  background-color: #333;
-  color: #fff;
+.accordion-item__dropdown {
+  display: none;
+  padding: 15px 0;
 }
 
-header.dark-theme {
-  background-color: #333;
-  color: #fff;
+.accordion-item__dropdown.open {
+  display: block;
+  animation: rotateIn 1s;
 }
 
-header.dark-theme h1 {
-  color: var(--color-heading); /* New color for dark theme */
-}
-
-footer.dark-theme {
-  background-color: #333;
-  color: #fff;
-}
-
-footer.dark-theme .footer-links a,
-footer.dark-theme .social-icons a {
-  color: #fff;
-}
+/* Moon GIF styling */
 #theme-toggle {
   background: url('images/moon.gif') no-repeat center center;
   background-size: cover;
@@ -178,9 +179,6 @@ footer.dark-theme .social-icons a {
   cursor: pointer;
   display: block;
   margin: 20px auto;
-  text-indent: -9999px; /* Скрытие текстового содержимого */
+  text-indent: -9999px; /* Hides text content */
   overflow: hidden;
-}
-header.dark-theme h1 {
-  color: var(--color-heading); /* Используем переменную для цвета заголовков в темной теме */
 }
