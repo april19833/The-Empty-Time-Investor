@@ -3,7 +3,7 @@
   --color-background: #d3a5a6; /* pale-rose */
   --color-foreground: #333;
   --color-primary: #a5d3d2;
-  --color-secondary: #6c757d;
+  --color-secondary: #700C40;
   --color-accent: #17a2b8;
   --font-body: 'Roboto', sans-serif;
   --font-heading: 'Playfair Display', serif;
@@ -23,7 +23,7 @@ body {
 .dark-theme {
   --color-background: #1c1c1c;
   --color-foreground: #d3a5a6;
-  --color-heading: #16706e; /* New color for dark theme */
+  --color-heading: #0c706e; /* New color for dark theme */
 }
 
 /* Container styles */
