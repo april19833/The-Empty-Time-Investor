@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
-    /* Accordion Styles */
+    /* Accordion styles */
     .accordion-item__click-target {
       cursor: pointer;
       padding: 15px 0;
@@ -116,3 +116,28 @@
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // JavaScript for the accordion
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+      const clickTarget = item.querySelector('.accordion-item__click-target');
+      const dropdown = item.querySelector('.accordion-item__dropdown');
+
+      clickTarget.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('open');
+        dropdown.style.display = isOpen ? 'block' : 'none';
+        clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
+
+        if (isOpen) {
+          clickTarget.classList.add('animate__rotateIn');
+        } else {
+          clickTarget.classList.remove('animate__rotateIn');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
