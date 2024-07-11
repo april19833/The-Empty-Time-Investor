@@ -52,7 +52,7 @@
     <section id="time-investment" class="card accordion-item">
       <h2 class="accordion-item__click-target">
         <span>Time Investment Strategies</span>
-        <span class="accordion-icon">+</span>
+        <span class="accordion-icon">$</span>
       </h2>
       <div class="accordion-item__dropdown">
         <p>Explore effective strategies for investing your time wisely.</p>
