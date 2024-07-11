@@ -1,7 +1,7 @@
 :root {
-  --color-background: #d3a5a6; /* pale-rose */
+  --color-background: #D3A5A6; /* pale-rose */
   --color-foreground: #333;
-  --color-primary: #a5d3d2;
+  --color-primary: #A5D3D2;
   --color-secondary: #6c757d;
   --color-accent: #17a2b8;
   --font-body: 'Roboto', sans-serif;
@@ -19,8 +19,8 @@ body {
 
 .dark-theme {
   --color-background: #1c1c1c;
-  --color-foreground: #d3a5a6;
-  --color-heading: #16706e; /* New color for dark theme */
+  --color-foreground: #D3A5A6;
+  --color-heading: #16706E; /* New color for dark theme */
 }
 
 .container {
@@ -66,21 +66,20 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-/* Remove styles for the button */
-#theme-toggle {
-  display: inline-block; /* Ensure the button container takes up space */
-  overflow: hidden; /* Hide any overflow from the image */
-  cursor: pointer; /* Change cursor to pointer on hover */
+button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-#theme-toggle img {
-  width: 40px; /* Adjust width of the moon GIF as needed */
-  height: auto; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Add transition effect for smooth rotation */
-}
-
-#theme-toggle:hover img {
-  transform: rotate(360deg); /* Rotate the moon GIF on hover */
+button:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.1);
 }
 
 main {
@@ -114,16 +113,14 @@ footer {
   text-align: center;
 }
 
-.footer-links a,
-.social-icons a {
+.footer-links a, .social-icons a {
   text-decoration: none;
   color: white;
   margin-right: 15px;
   transition: color 0.3s;
 }
 
-.footer-links a:hover,
-.social-icons a:hover {
+.footer-links a:hover, .social-icons a:hover {
   color: var(--color-accent);
 }
 
@@ -136,8 +133,7 @@ footer p {
   margin: 0;
 }
 
-.footer-links,
-.social-icons {
+.footer-links, .social-icons {
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -146,12 +142,12 @@ footer p {
 /* Dark theme styles */
 body.dark-theme {
   background-color: #333;
-  color: #16706e;
+  color: #fff;
 }
 
 header.dark-theme {
   background-color: #333;
-  color: #16706e;
+  color: #fff;
 }
 
 header.dark-theme h1 {
@@ -160,10 +156,10 @@ header.dark-theme h1 {
 
 footer.dark-theme {
   background-color: #333;
-  color: #16706e;
+  color: #fff;
 }
 
 footer.dark-theme .footer-links a,
 footer.dark-theme .social-icons a {
-  color: #16706e;
+  color: #fff;
 }
