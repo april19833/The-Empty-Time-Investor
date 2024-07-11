@@ -6,6 +6,7 @@
   <title>Investing in Empty Time</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     /* Accordion styles */
     .accordion-item__click-target {
@@ -29,18 +30,45 @@
       display: block;
     }
 
-    /* Moon GIF styling */
+    /* Header styles */
+    header {
+      background-color: #A6D3A5; /* Change header background color */
+    }
+
+    header nav ul li a {
+      color: #333; /* Navigation menu link text color */
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #A6D3A5; /* Change footer background color */
+    }
+
+    /* Theme toggle button */
     #theme-toggle {
-      background: url('moon.gif') no-repeat center center;
-      background-size: cover;
-      width: 50px;
-      height: 50px;
+      background-color: #333;
+      color: #fff;
       border: none;
+      padding: 10px 20px;
       cursor: pointer;
-      display: block;
-      margin: 20px auto;
-      text-indent: -9999px; /* Hides text content */
-      overflow: hidden;
+      transition: background-color 0.3s ease;
+    }
+
+    #theme-toggle:hover {
+      background-color: #555;
+    }
+
+    .animate__rotateIn {
+      animation: rotate-in 0.5s forwards;
+    }
+
+    @keyframes rotate-in {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   </style>
 </head>
@@ -58,14 +86,15 @@
           <li><a href="#tech-gadgets">Tech and Gadgets</a></li>
         </ul>
       </nav>
-      <!-- Moon GIF theme toggle -->
-      <button id="theme-toggle" aria-label="Toggle Theme"></button>
+      <button id="theme-toggle">
+        <img src="images/moon.gif" alt="Moon GIF">
+      </button>
     </div>
   </header>
 
   <main>
     <section id="time-investment" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Time Investment Strategies</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -75,7 +104,7 @@
     </section>
 
     <section id="crypto-insights" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Crypto Insights</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -85,7 +114,7 @@
     </section>
 
     <section id="minimalist-lifestyle" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Minimalist Lifestyle</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -95,7 +124,7 @@
     </section>
 
     <section id="stylish-living" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Stylish Living on a Budget</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -105,7 +134,7 @@
     </section>
 
     <section id="tech-gadgets" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Tech and Gadgets</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -144,10 +173,16 @@
         const isOpen = item.classList.toggle('open');
         dropdown.style.display = isOpen ? 'block' : 'none';
         clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
+
+        if (isOpen) {
+          clickTarget.classList.add('animate__rotateIn');
+        } else {
+          clickTarget.classList.remove('animate__rotateIn');
+        }
       });
     });
 
-    // JavaScript for moon GIF theme toggle
+    // JavaScript for theme toggle button
     const themeToggle = document.getElementById('theme-toggle');
 
     themeToggle.addEventListener('click', () => {
