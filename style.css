@@ -66,23 +66,21 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-button {
-  display: block;
-  margin: 20px auto 0;
-  padding: 0; /* Adjust padding as needed */
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
+/* Remove styles for the button */
+#theme-toggle {
+  display: inline-block; /* Ensure the button container takes up space */
+  overflow: hidden; /* Hide any overflow from the image */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-button img {
-  width: 40px; /* Adjust size of the moon GIF */
-  height: auto;
+#theme-toggle img {
+  width: 40px; /* Adjust width of the moon GIF as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition effect for smooth rotation */
 }
 
-button:hover {
-  transform: scale(1.1);
+#theme-toggle:hover img {
+  transform: rotate(360deg); /* Rotate the moon GIF on hover */
 }
 
 main {
@@ -146,33 +144,26 @@ footer p {
 }
 
 /* Dark theme styles */
-#theme-toggle {
-  background: none; /* Remove background color */
-  color: var(--color-foreground); /* Use foreground color for button text */
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+body.dark-theme {
+  background-color: #333;
+  color: #16706e;
 }
 
-#theme-toggle img {
-  width: 30px; /* Adjust size of the moon GIF */
-  height: auto;
-  transition: transform 0.3s ease;
+header.dark-theme {
+  background-color: #333;
+  color: #16706e;
 }
 
-#theme-toggle:hover {
-  transform: scale(1.1);
+header.dark-theme h1 {
+  color: var(--color-heading); /* New color for dark theme */
 }
 
-body.dark-theme #theme-toggle img {
-  filter: invert(1) brightness(100); /* Invert color for moon in dark theme */
+footer.dark-theme {
+  background-color: #333;
+  color: #16706e;
 }
 
-body.dark-theme #theme-toggle:hover img {
-  filter: invert(1) brightness(120); /* Adjust brightness on hover in dark theme */
+footer.dark-theme .footer-links a,
+footer.dark-theme .social-icons a {
+  color: #16706e;
 }
