@@ -29,6 +29,47 @@
     .accordion-item__dropdown.open {
       display: block;
     }
+
+    /* Header styles */
+    header {
+      background-color: #A6D3A5; /* Изменяем цвет шапки */
+    }
+
+    header nav ul li a {
+      color: #333; /* Цвет текста ссылок в навигационном меню */
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #A6D3A5; /* Изменяем цвет нижней части шапки */
+    }
+
+    /* Theme toggle button */
+    #theme-toggle {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #theme-toggle:hover {
+      background-color: #555;
+    }
+
+    .animate__rotateIn {
+      animation: rotate-in 0.5s forwards;
+    }
+
+    @keyframes rotate-in {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -137,6 +178,13 @@
           clickTarget.classList.remove('animate__rotateIn');
         }
       });
+    });
+
+    // JavaScript for theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme'); // Toggle dark theme class on body
     });
   </script>
 </body>
