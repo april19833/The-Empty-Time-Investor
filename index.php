@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investing in Empty Time</title>
+  <h2 class="accordion-item__click-target animate__animated animate__rotateOut">
+  <span>Investing in Empty Time</span>
+  <span class="accordion-icon">$</span>
+</h2>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
