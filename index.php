@@ -28,6 +28,20 @@
     .accordion-item__dropdown.open {
       display: block;
     }
+
+    /* Moon GIF styling */
+    #theme-toggle {
+      background: url('moon.gif') no-repeat center center;
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+      text-indent: -9999px; /* Hides text content */
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -44,7 +58,8 @@
           <li><a href="#tech-gadgets">Tech and Gadgets</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle">Toggle Theme</button>
+      <!-- Moon GIF theme toggle -->
+      <button id="theme-toggle" aria-label="Toggle Theme"></button>
     </div>
   </header>
 
@@ -132,7 +147,7 @@
       });
     });
 
-    // JavaScript for theme toggle button
+    // JavaScript for moon GIF theme toggle
     const themeToggle = document.getElementById('theme-toggle');
 
     themeToggle.addEventListener('click', () => {
