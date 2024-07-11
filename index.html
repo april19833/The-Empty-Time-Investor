@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Стили аккордеона */
+    /* Accordion styles */
     .accordion-item__click-target {
       cursor: pointer;
       padding: 15px 0;
@@ -118,7 +118,7 @@
 
   <script src="script.js"></script>
   <script>
-    // JavaScript для аккордеона
+    // JavaScript for the accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
 
     accordionItems.forEach(item => {
@@ -130,6 +130,13 @@
         dropdown.style.display = isOpen ? 'block' : 'none';
         clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
       });
+    });
+
+    // JavaScript for theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme'); // Toggle dark theme class on body
     });
   </script>
 </body>
