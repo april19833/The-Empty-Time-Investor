@@ -6,8 +6,9 @@
   <title>Investing in Empty Time</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
-    /* Стили аккордеона */
+    /* Accordion styles */
     .accordion-item__click-target {
       cursor: pointer;
       padding: 15px 0;
@@ -50,7 +51,7 @@
 
   <main>
     <section id="time-investment" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Time Investment Strategies</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -60,7 +61,7 @@
     </section>
 
     <section id="crypto-insights" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Crypto Insights</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -70,7 +71,7 @@
     </section>
 
     <section id="minimalist-lifestyle" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Minimalist Lifestyle</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -80,7 +81,7 @@
     </section>
 
     <section id="stylish-living" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Stylish Living on a Budget</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -90,7 +91,7 @@
     </section>
 
     <section id="tech-gadgets" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
+      <h2 class="accordion-item__click-target animate__animated">
         <span>Tech and Gadgets</span>
         <span class="accordion-icon">$</span>
       </h2>
@@ -118,7 +119,7 @@
 
   <script src="script.js"></script>
   <script>
-    // JavaScript для аккордеона
+    // JavaScript for the accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
 
     accordionItems.forEach(item => {
@@ -129,6 +130,12 @@
         const isOpen = item.classList.toggle('open');
         dropdown.style.display = isOpen ? 'block' : 'none';
         clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
+
+        if (isOpen) {
+          clickTarget.classList.add('animate__rotateIn');
+        } else {
+          clickTarget.classList.remove('animate__rotateIn');
+        }
       });
     });
   </script>
