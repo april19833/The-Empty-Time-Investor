@@ -169,3 +169,18 @@ footer.dark-theme .footer-links a,
 footer.dark-theme .social-icons a {
   color: #fff;
 }
+#theme-toggle {
+  background: url('images/moon.gif') no-repeat center center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  text-indent: -9999px; /* Hides text content */
+  overflow: hidden;
+}
+header.dark-theme h1 {
+  color: var(--color-heading); /* Correct color for dark theme heading */
+}
