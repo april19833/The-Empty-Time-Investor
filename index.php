@@ -1,158 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investing in Empty Time</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Accordion styles */
-    .accordion-item__click-target {
-      cursor: pointer;
-      padding: 15px 0;
-      border-bottom: 1px solid #ddd;
-    }
+:root {
+  --color-background: #d3a5a6; /* pale-rose */
+  --color-foreground: #333;
+  --color-primary: #a5d3d2;
+  --color-secondary: #6c757d;
+  --color-accent: #17a2b8;
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+}
 
-    .accordion-item__title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    .accordion-item__dropdown {
-      display: none;
-      padding: 15px 0;
-    }
+.dark-theme {
+  --color-background: #1c1c1c;
+  --color-foreground: #d3a5a6;
+  --color-heading: #16706e; /* New color for dark theme */
+}
 
-    .accordion-item__dropdown.open {
-      display: block;
-    }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
 
-    /* Moon GIF styling */
-    #theme-toggle {
-      background: url('moon.gif') no-repeat center center;
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      border: none;
-      cursor: pointer;
-      display: block;
-      margin: 20px auto;
-      text-indent: -9999px; /* Hides text content */
-      overflow: hidden;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Investing in Empty Time</h1>
-      <!-- Navigation menu -->
-      <nav>
-        <ul>
-          <li><a href="#time-investment">Time Investment Strategies</a></li>
-          <li><a href="#crypto-insights">Crypto Insights</a></li>
-          <li><a href="#minimalist-lifestyle">Minimalist Lifestyle</a></li>
-          <li><a href="#stylish-living">Stylish Living on a Budget</a></li>
-          <li><a href="#tech-gadgets">Tech and Gadgets</a></li>
-        </ul>
-      </nav>
-      <!-- Moon GIF theme toggle -->
-      <button id="theme-toggle" aria-label="Toggle Theme"></button>
-    </div>
-  </header>
+header {
+  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  background-image: url('header-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-  <main>
-    <section id="time-investment" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
-        <span>Time Investment Strategies</span>
-        <span class="accordion-icon">$</span>
-      </h2>
-      <div class="accordion-item__dropdown">
-        <p>Explore effective strategies for investing your time wisely.</p>
-      </div>
-    </section>
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+}
 
-    <section id="crypto-insights" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
-        <span>Crypto Insights</span>
-        <span class="accordion-icon">$</span>
-      </h2>
-      <div class="accordion-item__dropdown">
-        <p>Discover insights and updates from the cryptocurrency world.</p>
-      </div>
-    </section>
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0 0 0;
+}
 
-    <section id="minimalist-lifestyle" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
-        <span>Minimalist Lifestyle</span>
-        <span class="accordion-icon">$</span>
-      </h2>
-      <div class="accordion-item__dropdown">
-        <p>Learn about living a minimalist lifestyle for greater simplicity.</p>
-      </div>
-    </section>
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  transition: color 0.3s;
+}
 
-    <section id="stylish-living" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
-        <span>Stylish Living on a Budget</span>
-        <span class="accordion-icon">$</span>
-      </h2>
-      <div class="accordion-item__dropdown">
-        <p>Tips and ideas for maintaining a stylish home on a limited budget.</p>
-      </div>
-    </section>
+nav a:hover {
+  color: var(--color-accent);
+}
 
-    <section id="tech-gadgets" class="card accordion-item">
-      <h2 class="accordion-item__click-target">
-        <span>Tech and Gadgets</span>
-        <span class="accordion-icon">$</span>
-      </h2>
-      <div class="accordion-item__dropdown">
-        <p>Explore the latest in technology and gadgets for modern living.</p>
-      </div>
-    </section>
-  </main>
+/* Remove styles for the button */
+#theme-toggle {
+  display: inline-block; /* Ensure the button container takes up space */
+  overflow: hidden; /* Hide any overflow from the image */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Investing in Empty Time</p>
-      <!-- Footer links and social icons -->
-      <div class="footer-links">
-        <a href="#privacy-policy">Privacy Policy</a>
-        <a href="#terms-of-service">Terms of Service</a>
-      </div>
-      <div class="social-icons">
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-      </div>
-    </div>
-  </footer>
+#theme-toggle img {
+  width: 40px; /* Adjust width of the moon GIF as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition effect for smooth rotation */
+}
 
-  <script src="script.js"></script>
-  <script>
-    // JavaScript for the accordion
-    const accordionItems = document.querySelectorAll('.accordion-item');
+#theme-toggle:hover img {
+  transform: rotate(360deg); /* Rotate the moon GIF on hover */
+}
 
-    accordionItems.forEach(item => {
-      const clickTarget = item.querySelector('.accordion-item__click-target');
-      const dropdown = item.querySelector('.accordion-item__dropdown');
+main {
+  padding: 20px 0;
+  background-color: var(--color-background);
+}
 
-      clickTarget.addEventListener('click', () => {
-        const isOpen = item.classList.toggle('open');
-        dropdown.style.display = isOpen ? 'block' : 'none';
-        clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
-      });
-    });
+.card {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    // JavaScript for moon GIF theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-theme'); // Toggle dark theme class on body
-    });
-  </script>
-</body>
-</html>
+.card h2 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+}
+
+footer {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links a,
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.social-icons a:hover {
+  color: var(--color-accent);
+}
+
+.social-icons a::before {
+  content: '🔗';
+  margin-right: 5px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-links,
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #333;
+  color: #16706e;
+}
+
+header.dark-theme {
+  background-color: #333;
+  color: #16706e;
+}
+
+header.dark-theme h1 {
+  color: var(--color-heading); /* New color for dark theme */
+}
+
+footer.dark-theme {
+  background-color: #333;
+  color: #16706e;
+}
+
+footer.dark-theme .footer-links a,
+footer.dark-theme .social-icons a {
+  color: #16706e;
+}
