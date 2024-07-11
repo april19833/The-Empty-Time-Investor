@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Theme toggle functionality
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('dark-theme'); // Toggle dark theme class on body
+
+    // Change moon icon color on dark theme toggle
+    const moonIcon = themeToggle.querySelector('img');
+    if (document.body.classList.contains('dark-theme')) {
+      moonIcon.src = 'images/moon-white.gif'; // Assuming you have a white moon GIF
+    } else {
+      moonIcon.src = 'images/moon.gif'; // Original moon GIF
+    }
   });
 
   // Accordion functionality
