@@ -1,4 +1,4 @@
-// JavaScript для аккордеона
+// JavaScript for the accordion
 const accordionItems = document.querySelectorAll('.accordion-item');
 
 accordionItems.forEach(item => {
@@ -9,12 +9,5 @@ accordionItems.forEach(item => {
     const isOpen = item.classList.toggle('open');
     dropdown.style.display = isOpen ? 'block' : 'none';
     clickTarget.querySelector('.accordion-icon').textContent = isOpen ? '-' : '+';
-
-    // Добавление и удаление класса анимации
-    if (isOpen) {
-      clickTarget.classList.add('animate__rotateIn');
-    } else {
-      clickTarget.classList.remove('animate__rotateIn');
-    }
   });
 });
