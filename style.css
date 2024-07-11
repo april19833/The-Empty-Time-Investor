@@ -1,5 +1,5 @@
 :root {
-  --color-background: #f0f0f0;
+  --color-background: #D3A5A6;
   --color-foreground: #333;
   --color-primary: #007bff;
   --color-secondary: #6c757d;
@@ -19,7 +19,7 @@ body {
 
 .dark-theme {
   --color-background: #1c1c1c;
-  --color-foreground: #f0f0f0;
+  --color-foreground: #D3A5A6;
 }
 
 .container {
