@@ -178,9 +178,9 @@ footer.dark-theme .social-icons a {
   cursor: pointer;
   display: block;
   margin: 20px auto;
-  text-indent: -9999px; /* Hides text content */
+  text-indent: -9999px; /* Скрытие текстового содержимого */
   overflow: hidden;
 }
 header.dark-theme h1 {
-  color: var(--color-heading); /* Correct color for dark theme heading */
+  color: var(--color-heading); /* Используем переменную для цвета заголовков в темной теме */
 }
