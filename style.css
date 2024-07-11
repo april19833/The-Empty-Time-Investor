@@ -148,12 +148,12 @@ footer p {
 /* Dark theme styles */
 body.dark-theme {
   background-color: #333;
-  color: #fff;
+  color: #16706e;
 }
 
 header.dark-theme {
   background-color: #333;
-  color: #fff;
+  color: #16706e;
 }
 
 header.dark-theme h1 {
@@ -162,10 +162,10 @@ header.dark-theme h1 {
 
 footer.dark-theme {
   background-color: #333;
-  color: #fff;
+  color: #16706e;
 }
 
 footer.dark-theme .footer-links a,
 footer.dark-theme .social-icons a {
-  color: #fff;
+  color: #16706e;
 }
